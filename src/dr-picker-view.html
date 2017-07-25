@@ -223,10 +223,10 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     //close pop
     closePop:function(){
       //初始化
-      let upperPList = JSON.parse(localStorage.getItem('currentPList'));
-      this.createDom(upperPList);
-      this.$.title.innerHTML ='省份';
-      this.$.location.innerHTML ='';
+      var currentDataVauleLength = this.currentData.value.length;
+      for(var i = 0 ; i<currentDataVauleLength ; i++){
+        this.upperLevel()
+      }
       this.$.heroContent.style.display = 'none';
     },
     //back upper level
